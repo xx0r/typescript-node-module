@@ -1,0 +1,49 @@
+{
+  "name": "typescript-node-module",
+  "version": "1.0.0",
+  "description": "Example of a npm module created in typescript",
+  "main": "dist/main.js",
+  "scripts":
+  {
+    "postinstall": "typings install",
+    "build": "rimraf dist && tsc && npm run build:copy",
+    "build:copy": "cpx \"./src/**/*.{html,png,jpg}\" dist",
+    "run": "lite-server -c browser-sync.config.json",
+
+    "pretest": "npm run build",
+    "test": "karma start karma.config.js"
+  },
+  "repository":
+  {
+    "type": "git",
+    "url": "https://github.com/xx0r/typescript-npm-module.git"
+  },
+  "keywords":
+  [
+    "typescript",
+    "node"
+  ],
+  "author": "korny@softival.com",
+  "license": "ISC",
+  "devDependencies":
+  {
+    "rimraf": "latest",
+    "cpx": "latest",
+    "karma": "^1.3.0",
+    "karma-jasmine": "^1.0.2",
+    "karma-chrome-launcher": "^2.0.0",
+    "karma-typescript": "^2.1.2",
+    "karma-spec-reporter": "0.0.26",
+    "jasmine-core": "^2.5.2",
+    "typescript": "^2.0.9",
+    "typings": "^2.0.0",
+    "lite-server": "^2.2.2"
+  },
+  "-vs-binding":
+  {
+    "AfterBuild":
+    [
+      "build"
+    ]
+  }
+}
