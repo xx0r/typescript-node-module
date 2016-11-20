@@ -1,4 +1,4 @@
-export declare class SampleModule {
+export declare class SampleController {
     constructor();
     process(): void;
 }

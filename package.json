@@ -1,8 +1,10 @@
 {
   "name": "typescript-node-module",
-  "version": "1.0.0",
-  "description": "Example of a npm module created in typescript",
+  "version": "1.0.1",
+  "description": "Example node module created in typescript",
   "main": "dist/main.js",
+  "module": "dist/main.js",
+  "typings": "dist/main.d.ts",
   "scripts":
   {
     "postinstall": "typings install",

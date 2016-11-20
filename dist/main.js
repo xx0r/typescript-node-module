@@ -1,11 +1,11 @@
 "use strict";
-var SampleModule = (function () {
-    function SampleModule() {
+var SampleController = (function () {
+    function SampleController() {
     }
-    SampleModule.prototype.process = function () {
-        console.log("Sample module process " + new Date());
+    SampleController.prototype.process = function () {
+        console.log("Sample controller process " + new Date());
     };
-    return SampleModule;
+    return SampleController;
 }());
-exports.SampleModule = SampleModule;
+exports.SampleController = SampleController;
 //# sourceMappingURL=main.js.map

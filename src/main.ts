@@ -1,10 +1,10 @@
-﻿export class SampleModule
+﻿export class SampleController
 {
     constructor()
     { }
 
     public process(): void
     {
-        console.log(`Sample module process ${new Date()}`);
+        console.log(`Sample controller process ${new Date()}`);
     }
 }
